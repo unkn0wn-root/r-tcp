@@ -1,0 +1,33 @@
+[package]
+name = "tcp-server"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1.36", features = ["full"] }
+dotenv = "0.15"
+config = "0.14"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
+thiserror = "1.0"
+byteorder = "1.4"
+libc = "0.2"
+nix = { version = "0.27", features = ["net", "resource"] }
+sys-info = "0.9"
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1.0"
+dashmap = "5.5"
+
+[dev-dependencies]
+tokio-test = "0.4"
+assert_matches = "1.5"
+
+[[bin]]
+name = "tcp-server"
+path = "src/main.rs"
+
+[lib]
+name = "tcp_server"
+path = "src/lib.rs"
