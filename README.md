@@ -18,7 +18,7 @@ make run-server
 ### Testing the server
 
 ```bash
-make run-example EXAMPLE=chat
+make chat
 ```
 
 Type any message and press enter. The server will echo back your message.
