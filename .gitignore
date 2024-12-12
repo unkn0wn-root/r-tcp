@@ -28,5 +28,4 @@ Thumbs.db
 *.rlib
 
 .env
-.env*
 !.env.example
