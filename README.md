@@ -1,7 +1,7 @@
 
 # Simple TCP Server in Rust
 
-My implementation of TCP server in Rust. Made two implementations:
+Made two implementations:
 1. A standard implementation using tokio package
 2. A raw implementation using system calls
 
