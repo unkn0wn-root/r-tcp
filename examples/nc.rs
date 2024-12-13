@@ -73,7 +73,7 @@ fn main() -> io::Result<()> {
         // send message
         stream.write_all(&message)?;
 
-        // read response using your Message format
+        // read response
         match read_response(&mut stream) {
             Ok((msg_type, resp_id, payload)) => {
                 match msg_type {
