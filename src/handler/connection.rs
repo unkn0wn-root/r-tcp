@@ -22,7 +22,7 @@ impl ConnectionHandler {
     pub async fn handle(&mut self) -> Result<()> {
         let mut buf = vec![0; self.buffer_size];
 
-        // Convert to async stream
+        // convert to async stream
         let mut stream = tokio::net::TcpStream::from_std(self.stream.try_clone()?)?;
 
         loop {
@@ -38,7 +38,7 @@ impl ConnectionHandler {
                 }
             };
 
-            // @toDo - Echo the data back (replace this with actual protocol handling)
+            // @toDo - echo the data back (replace this with actual protocol handling)
             if let Err(e) = stream.write_all(&buf[..n]).await {
                 error!("Error writing to connection {}: {}", self.peer_addr, e);
                 return Err(e.into());

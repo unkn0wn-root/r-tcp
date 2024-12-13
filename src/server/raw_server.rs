@@ -2,7 +2,14 @@ use crate::{config::ServerConfig, error::Result};
 use crate::handler::ConnectionHandler;
 use log::{error, info};
 use nix::sys::socket::{
-    accept, bind, getpeername, listen, socket, setsockopt, sockopt, AddressFamily, SockFlag, SockType, SockaddrIn,
+    accept,
+    bind,
+    getpeername,
+    listen,
+    socket,
+    setsockopt,
+    sockopt,
+    AddressFamily, SockFlag, SockType, SockaddrIn,
 };
 use nix::sys::time::TimeVal;
 use std::os::unix::io::{FromRawFd, AsRawFd};

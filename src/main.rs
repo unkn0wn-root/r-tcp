@@ -25,14 +25,12 @@ async fn main() {
     info!("Starting TCP server...");
 
     if use_raw {
-        // raw syscalls server
         let server = RawServer::new(config);
         if let Err(e) = server.run() {
             error!("Server error: {}", e);
             std::process::exit(1);
         }
     } else {
-        // standard library server
         let server = StdServer::new(config);
         if let Err(e) = server.run().await {
             error!("Server error: {}", e);

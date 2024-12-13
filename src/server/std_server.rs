@@ -1,4 +1,3 @@
-
 use crate::{config::ServerConfig, error::Result};
 use crate::handler::ConnectionHandler;
 
